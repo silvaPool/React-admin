@@ -1,8 +1,8 @@
-import { Datagrid, List, TextField } from "react-admin";
+import { Datagrid, List, SimpleList, TextField } from "react-admin";
 
 export const UserList = () => (
     <List>
-        <Datagrid rowClick="edit">
+        {/* <Datagrid rowClick="edit">
             <TextField source="id" />
             <TextField source="name" />
             <TextField source="username" />
@@ -11,6 +11,11 @@ export const UserList = () => (
             <TextField source="phone" />
             <TextField source="website" />
             <TextField source="company.name" />
-        </Datagrid>
+        </Datagrid> */}
+        <SimpleList
+            primaryText={(record) => record.name}
+            secondaryText={(record) => record.username}
+            tertiaryText={(record) => record.email}
+        />
     </List>
 );
