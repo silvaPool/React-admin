@@ -1,5 +1,5 @@
 import { Theme, useMediaQuery } from "@mui/material";
-import { Datagrid, List, SimpleList, TextField } from "react-admin";
+import { Datagrid, List, SimpleList, TextField, UrlField } from "react-admin";
 
 export const UserList = () => {
 
@@ -20,7 +20,8 @@ export const UserList = () => {
             <TextField source="email" />
             <TextField source="address.street" />
             <TextField source="phone" />
-            <TextField source="website" />
+            {/* <TextField source="website" /> */}
+            <UrlField source="website" />
             <TextField source="company.name" />
         </Datagrid>
             )}
